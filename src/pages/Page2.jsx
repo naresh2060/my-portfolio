@@ -33,7 +33,7 @@ export default function Page2() {
             {/* Right Image */}
             <div className="w-full md:w-1/2">
               <img
-                src="/image/case_study_1.png"
+                src={`${import.meta.env.BASE_URL}image/case_study_1.png`}
                 alt="Case Study Image"
                 className="w-full h-80 object-cover"
               />
@@ -61,7 +61,7 @@ export default function Page2() {
             {/* Left Image */}
             <div className="w-full md:w-1/2">
               <img 
-                src="/image/case_study_2.png"
+                src={`${import.meta.env.BASE_URL}image/case_study_2.png`}
                 alt="Case Study Image"
                 className="w-full h-80 object-cover"
               />
@@ -89,7 +89,7 @@ export default function Page2() {
             {/* Right Image */}
             <div className="w-full md:w-1/2">
               <img
-                src="/image/case_study_1.png"
+                src={`${import.meta.env.BASE_URL}image/case_study_3.png`}
                 alt="Case Study Image"
                 className="w-full h-80 object-cover"
               />
