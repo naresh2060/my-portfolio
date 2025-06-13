@@ -18,7 +18,9 @@ export default function Home() {
                         <Button className="ibm-plex-mono-bold text-1xl" text="Let's get started" />
                     </div>
                     <div className="profile-container w-1/3 mt-8">
-                        <img src="/image/profile.jpg" alt="Profile Picture" className="profile-image" />
+                        {/* <img src="/image/profile.jpg" alt="Profile Picture Here" className="profile-image" /> */}
+                        <img src={`${import.meta.env.BASE_URL}image/profile.jpg`} alt="Profile Picture Here" className="profile-image" />
+
                     </div>
                 </div>
                 <div className="bg-black text-white flex  mx-[15%] ">

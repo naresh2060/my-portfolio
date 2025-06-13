@@ -42,7 +42,9 @@ const projects = [ {
   title: "Portfolio Website",
   description:
     "Developed a personal portfolio showcasing projects and achievements with an elegant design.",
-  image: "/image/portfolio.png",
+  // image: "/image/portfolio.png",
+  image: `${import.meta.env.BASE_URL}image/portfolio.png`
+
 },
   {
     title: "E-Commerce Website",
