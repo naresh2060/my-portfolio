@@ -21,10 +21,10 @@ export default function Page2() {
               <span className="px-3 py-1 text-sm font-semibold text-orange-600 bg-orange-100 rounded-full ibm-plex-mono-regular">
                 Fintech
               </span>
-              <h2 className="mt-4 text-2xl font-bold text-gray-900 ibm-plex-mono-bold">Work name here</h2>
+              <h2 className="mt-4 text-2xl font-bold text-gray-900 ibm-plex-mono-bold">Web Development</h2>
               <p className="mt-2 text-gray-600 ibm-plex-mono-regular">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+              I build responsive, fast, and user-focused web applications using modern technologies like React, Node.js, and MongoDB, with a focus on clean design, security, and performance.
+               </p>
               <button className="mt-4 px-5 py-3 bg-orange-500 text-white font-semibold rounded-lg shadow-md hover:bg-orange-600 transition">
                 View case study →
               </button>
@@ -33,7 +33,7 @@ export default function Page2() {
             {/* Right Image */}
             <div className="w-full md:w-1/2">
               <img
-                src={`${import.meta.env.BASE_URL}image/case_study_1.png`}
+                src={`${import.meta.env.BASE_URL}image/case_study_1.jpg`}
                 alt="Case Study Image"
                 className="w-full h-80 object-cover"
               />

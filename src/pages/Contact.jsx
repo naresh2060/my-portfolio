@@ -35,9 +35,7 @@ function Contact() {
         </form>
     </div>
 
-    <footer className="absolute bottom-5 text-gray-400 text-sm">
-        Made with ❤️
-    </footer>
+   
 
 </div>
 

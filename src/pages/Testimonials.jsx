@@ -2,22 +2,22 @@ import React from "react";
 
 const testimonials = [
   {
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Built a smooth, responsive website that perfectly fits our needs. Professional and reliable developer!",
     name: "Client Name",
     image: "https://randomuser.me/api/portraits/women/79.jpg",
   },
   {
-    text: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Excellent communication and timely delivery. The project exceeded our expectations in quality and performance.",
     name: "Client Name",
     image: "https://randomuser.me/api/portraits/men/44.jpg",
   },
   {
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Highly skilled and detail-oriented. The final product was clean, fast, and user-friendly.",
     name: "Client Name",
     image: "https://randomuser.me/api/portraits/women/65.jpg",
   },
   {
-    text: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Very satisfied with the work. The website looks great and functions flawlessly across devices.",
     name: "Client Name",
     image: "https://randomuser.me/api/portraits/women/48.jpg",
   },
@@ -30,8 +30,7 @@ const Testimonials = () => {
       <div className="text-center mb-8">
         <h2 className="text-white text-4xl font-bold ibm-plex-mono-bold">Testimonials</h2>
         <p className="text-gray-400 mt-2 max-w-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+         Experience shared by our clients
         </p>
       </div>
 

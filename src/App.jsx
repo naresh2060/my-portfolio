@@ -5,6 +5,7 @@ import Testimonials from './pages/Testimonials.jsx'
 import Work from './pages/Work.jsx'
 import Contact from './pages/Contact.jsx'
 import ScrollToTopButton from './component/ScrollToTopButton.jsx'
+import Footer from './pages/footer.jsx'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Work/>
       <Contact/>
       <ScrollToTopButton />
+      <Footer/>
     </div>
   )
 }
