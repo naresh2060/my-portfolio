@@ -100,12 +100,13 @@ function Contact() {
             </div>
 
             <button
-              type="submit"
-              className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-md transition relative"
-            >
-              Submit →
-              <span className="absolute inset-0 bg-green-700 opacity-20 blur-lg rounded-md"></span>
-            </button>
+  type="submit"
+  className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-md transition-transform duration-300 ease-in-out transform hover:scale-105 cursor-pointer relative"
+>
+  Submit →
+  <span className="absolute inset-0 bg-green-700 opacity-20 blur-lg rounded-md"></span>
+</button>
+
                         {/* {status === 'SUCCESS' && <p className="text-green-500 mt-4">Thank you! Your message has been sent.</p>}
                         {status === 'ERROR' && <p className="text-red-500 mt-4">Oops! Something went wrong. Please try again.</p>} */}
           </form>
