@@ -95,7 +95,7 @@ function Contact() {
                 placeholder="Enter your message"
                 rows="4"
                 required
-                className="w-full p-3 border border-gray-700 rounded-md bg-white text-black"
+                className="w-full p-3 border border-gray-700 rounded-md bg-white text-black resize-none"
               ></textarea>
             </div>
 

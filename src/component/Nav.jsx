@@ -27,7 +27,7 @@ export default function Nav() {
 
       <div className="logo mr-8 flex items-center gap-4">
         <FontAwesomeIcon icon={faBell} className='text-white text-xl' />
-        <FontAwesomeIcon icon={faComment} className='text-white text-2xl' />
+        <FontAwesomeIcon icon={faComment} className='text-white text-2xl cursor-pointer' onClick={() => scrollToSection('contact')}/>
       </div>
     </nav>
   )

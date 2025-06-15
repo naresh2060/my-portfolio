@@ -3,22 +3,22 @@ import React from "react";
 const testimonials = [
   {
     text: "Built a smooth, responsive website that perfectly fits our needs. Professional and reliable developer!",
-    name: "Client Name",
+    name: "Prakash Thapa",
     image: "https://randomuser.me/api/portraits/women/79.jpg",
   },
   {
     text: "Excellent communication and timely delivery. The project exceeded our expectations in quality and performance.",
-    name: "Client Name",
+    name: "Bibek Adhikari",
     image: "https://randomuser.me/api/portraits/men/44.jpg",
   },
   {
     text: "Highly skilled and detail-oriented. The final product was clean, fast, and user-friendly.",
-    name: "Client Name",
+    name: "Kriti Bhandari",
     image: "https://randomuser.me/api/portraits/women/65.jpg",
   },
   {
     text: "Very satisfied with the work. The website looks great and functions flawlessly across devices.",
-    name: "Client Name",
+    name: "Anjali Gurung",
     image: "https://randomuser.me/api/portraits/women/48.jpg",
   },
 ];
