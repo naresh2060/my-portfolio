@@ -42,9 +42,9 @@ const RecentWork = () => {
   return (
     <div id="recent-work" className="w-full min-h-screen bg-white flex flex-col items-center justify-center px-4 md:px-0 box-border">
       {/* Title Section */}
-      <div className="text-center mb-6 md:mb-8 mt-6 md:mt-8 w-full">
-        <h2 className="text-black text-2xl md:text-4xl font-bold mb-3 md:mb-4">Recent Work</h2>
-        <p className="text-gray-400 text-xs md:text-base max-w-2xl mx-auto font-mono tracking-wide leading-relaxed px-4">
+      <div className="text-center mb-6 md:mb-12 mt-6 md:mt-16 w-full">
+        <h2 className="text-black text-2xl md:text-5xl font-bold mb-3 md:mb-6">Recent Work</h2>
+        <p className="text-gray-400 text-xs md:text-lg max-w-2xl mx-auto font-mono tracking-wide leading-relaxed px-4">
           Solving user & business problems for over 15 years.<br />
           I build elegant and effective solutions that make a real difference.
         </p>
@@ -92,25 +92,25 @@ const RecentWork = () => {
       <div className="hidden md:block w-full">
         <div className="w-full flex flex-row items-center justify-between">
           {/* Left Arrow */}
-          <div className="flex justify-center items-center w-16 md:w-24 min-w-[3rem] md:min-w-[4rem] ml-[3vw] md:ml-[5vw]">
+          <div className="flex justify-center items-center w-24 min-w-[6rem] ml-[8vw]">
             <button
-              className="z-30 bg-white border border-gray-400 text-gray-400 p-2 md:p-3 rounded-full transition-colors duration-200 hover:border-gray-600 hover:text-gray-600 cursor-pointer"
+              className="z-30 bg-white border border-gray-400 text-gray-400 p-4 rounded-full transition-colors duration-200 hover:border-gray-600 hover:text-gray-600 cursor-pointer"
               onClick={() => swiperRef.current?.swiper?.slidePrev()}
               aria-label="Previous slide"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 md:w-8 md:h-8">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
           </div>
 
           {/* Swiper Slider */}
-          <div className="w-full max-w-5xl relative flex items-center">
+          <div className="w-full max-w-6xl relative flex items-center">
             <Swiper
               ref={swiperRef}
               modules={[Navigation]}
               navigation={false}
-              spaceBetween={24}
+              spaceBetween={40}
               slidesPerView={2}
               loop={true}
               speed={800}
@@ -118,22 +118,22 @@ const RecentWork = () => {
             >
               {projects.map((project, index) => (
                 <SwiperSlide key={index}>
-                  <div className="flex flex-col items-center p-3 md:p-4">
+                  <div className="flex flex-col items-center p-4">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="rounded-xl shadow-lg w-full h-[250px] md:h-[300px] object-cover mb-4 md:mb-6"
+                      className="rounded-xl shadow-lg w-full h-[350px] object-cover mb-8"
                     />
                     <div className="w-full text-left">
-                      <h3 className="text-xl md:text-2xl font-bold mb-2">{project.title}</h3>
-                      <p className="text-gray-400 text-sm md:text-base mb-4 md:mb-6 font-mono leading-relaxed">
+                      <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
+                      <p className="text-gray-400 text-lg mb-8 font-mono leading-relaxed">
                         {project.description}
                       </p>
                       <button
-                        className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 md:py-3 px-6 md:px-8 rounded-lg shadow-lg transition transform hover:scale-105 duration-300 flex items-center gap-2 cursor-pointer text-sm md:text-base"
+                        className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition transform hover:scale-105 duration-300 flex items-center gap-2 cursor-pointer text-lg"
                         onClick={() => window.open(project.link, '_blank')}
                       >
-                        Know more <span className="text-lg md:text-xl">&rarr;</span>
+                        Know more <span className="text-xl">&rarr;</span>
                       </button>
                     </div>
                   </div>
@@ -143,13 +143,13 @@ const RecentWork = () => {
           </div>
 
           {/* Right Arrow */}
-          <div className="flex justify-center items-center w-16 md:w-24 min-w-[3rem] md:min-w-[4rem] mr-[3vw] md:mr-[5vw]">
+          <div className="flex justify-center items-center w-24 min-w-[6rem] mr-[8vw]">
             <button
-              className="z-30 bg-white border border-gray-400 text-gray-400 p-2 md:p-3 rounded-full transition-colors duration-200 hover:border-gray-600 hover:text-gray-600 cursor-pointer"
+              className="z-30 bg-white border border-gray-400 text-gray-400 p-4 rounded-full transition-colors duration-200 hover:border-gray-600 hover:text-gray-600 cursor-pointer"
               onClick={() => swiperRef.current?.swiper?.slideNext()}
               aria-label="Next slide"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 md:w-8 md:h-8">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>

@@ -31,9 +31,9 @@ const Testimonials = () => {
   return (
     <div id="testimonials" className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-4 md:px-6 box-border ibm-plex-mono-regular">
       {/* Title Section */}
-      <div className="text-center mb-6 md:mb-8">
-        <h2 className="text-white text-2xl md:text-4xl font-bold ibm-plex-mono-bold">Testimonials</h2>
-        <p className="text-gray-400 mt-2 text-xs md:text-sm max-w-lg">
+      <div className="text-center mb-6 md:mb-12">
+        <h2 className="text-white text-2xl md:text-5xl font-bold ibm-plex-mono-bold">Testimonials</h2>
+        <p className="text-gray-400 mt-2 text-xs md:text-lg max-w-lg">
           Experience shared by our clients
         </p>
       </div>
@@ -71,21 +71,21 @@ const Testimonials = () => {
       </div>
 
       {/* Desktop Grid */}
-      <div className="hidden md:grid md:grid-cols-2 gap-4 md:gap-6 w-full max-w-4xl">
+      <div className="hidden md:grid md:grid-cols-2 gap-8 w-full max-w-6xl">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className="bg-zinc-900 text-white p-6 md:p-8 rounded-xl shadow-lg relative transform hover:scale-105 transition-transform duration-300"
+            className="bg-zinc-900 text-white p-8 rounded-xl shadow-lg relative transform hover:scale-105 transition-transform duration-300"
           >
-            <span className="absolute top-4 left-4 text-4xl md:text-5xl text-zinc-700">"</span>
-            <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-4 md:mb-6 mt-3 md:mt-4">{testimonial.text}</p>
-            <div className="flex items-center gap-3 md:gap-4">
+            <span className="absolute top-6 left-6 text-6xl text-zinc-700">"</span>
+            <p className="text-gray-300 text-lg leading-relaxed mb-8 mt-6">{testimonial.text}</p>
+            <div className="flex items-center gap-4">
               <img
                 src={testimonial.image}
                 alt={testimonial.name}
-                className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-zinc-700"
+                className="w-14 h-14 rounded-full border-2 border-zinc-700"
               />
-              <span className="font-semibold text-sm md:text-lg">{testimonial.name}</span>
+              <span className="font-semibold text-xl">{testimonial.name}</span>
             </div>
           </div>
         ))}
