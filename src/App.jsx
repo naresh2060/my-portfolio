@@ -9,7 +9,7 @@ import Footer from './pages/footer.jsx'
 
 export default function App() {
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full overflow-x-hidden ">
       <Home/>
       <Page2/>
       <Testimonials/>

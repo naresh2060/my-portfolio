@@ -4,50 +4,59 @@ import Nav from '../component/Nav'
 import Button from '../component/Button'
 import '../font.css'
 
-
 export default function Home() {
     return (
         <div id="home">
-            <div className="body box-border " >
+            <div className="body box-border bg-zinc-900 min-h-screen">
                 <Nav />
-                {/* <Button/> */}
-                <div className="description text-white flex mx-[15%] mt-10 ">
-                    <div className="detail w-2/3 mr-50 mt-20">
-                        <div className="name ibm-plex-mono-bold text-5xl">Naresh Kushawaha</div>
-                        <div className="desc ibm-plex-mono-regular my-10 ">Passionate developer crafting clean, scalable, and user-friendly applications with modern technologies. Turning ideas into reality through code.</div>
-                        <Button className="ibm-plex-mono-bold text-1xl" text="Let's get started" />
-                    </div>
-                    <div className="profile-container w-1/3 mt-8">
-                        {/* <img src="/image/profile.jpg" alt="Profile Picture Here" className="profile-image" /> */}
-                        <img src={`${import.meta.env.BASE_URL}image/profile.jpg`} alt="Profile Picture Here" className="profile-image" />
-
-                    </div>
-                </div>
-                <div className="bg-black text-white flex  mx-[15%] ">
-                    <div className="text-left">
-                        <h2 className="text-sm mb-5 ibm-plex-mono-regular">Worked with</h2>
-                        <div className="flex space-x-4">
-                            <div className="bg-gray-900 border border-gray-800 ibm-plex-mono-bold font-semibold py-3 px-6 rounded-lg uppercase opacity-50 hover:opacity-100 transition">
-                                ClickUp
-                            </div>
-                            <div className="bg-gray-900 border border-gray-800 ibm-plex-mono-bold font-semibold py-3 px-6 rounded-lg uppercase opacity-50 hover:opacity-100 transition">
-                                Dropbox
-                            </div>
-                            <div className="bg-gray-900 border border-gray-800 ibm-plex-mono-bold font-semibold py-3 px-6 rounded-lg uppercase opacity-50 hover:opacity-100 transition">
-                                Paychex
-                            </div>
-                            <div className="bg-gray-900 border border-gray-800 ibm-plex-mono-bold font-semibold py-3 px-6 rounded-lg uppercase opacity-50 hover:opacity-100 transition">
-                                Elastic
-                            </div>
-                            <div className="bg-gray-900 border border-gray-800 ibm-plex-mono-bold font-semibold py-3 px-6 rounded-lg uppercase opacity-50 hover:opacity-100 transition">
-                                Stripe
-                            </div>
+                
+                {/* Main Content Container */}
+                <div className="flex flex-col pt-15 md:flex-row mx-[5%] md:mx-[15%] mt-10 md:mt-20">
+                    {/* Profile Image - Top on mobile, Right on desktop */}
+                    <div className="w-full md:w-1/3 order-1 md:order-2 flex justify-center md:justify-end mb-8 md:mb-0">
+                        <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-zinc-700 shadow-xl transform hover:scale-105 transition-transform duration-300">
+                            <img 
+                                src={`${import.meta.env.BASE_URL}image/profile.jpg`} 
+                                alt="Naresh Kushawaha" 
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                     </div>
 
+                    {/* Text Content - Below image on mobile, Left on desktop */}
+                    <div className="w-full md:w-2/3 order-2 md:order-1 flex flex-col items-center md:items-start text-center md:text-left">
+                        <h1 className="ibm-plex-mono-bold text-4xl md:text-5xl text-white mb-6 animate-fade-in">
+                            Naresh Kushawaha
+                        </h1>
+                        <p className="ibm-plex-mono-regular text-lg md:text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed">
+                            Passionate developer crafting clean, scalable, and user-friendly applications with modern technologies. Turning ideas into reality through code.
+                        </p>
+                        <div className="mb-5">
+                            <Button className="ibm-plex-mono-bold text-sm transform hover:scale-105 transition-transform duration-300" text="Let's get started" />
+                        </div>
+                    </div>
+                </div>
+
+                {/* Worked With Section */}
+                <div className="mx-[5%] md:mx-[15%] mt-0 md:mt-20 mb-20">
+                    <h2 className="text-sm mb-6 ibm-plex-mono-regular text-white text-center md:text-left">
+                        Worked with
+                    </h2>
+                    <div className="grid grid-cols-2 md:flex md:flex-row gap-4 md:gap-6 justify-center md:justify-start">
+                        {['ClickUp', 'Dropbox', 'Paychex', 'Elastic'].map((company) => (
+                            <div 
+                                key={company}
+                                className="bg-gray-100 border border-zinc-700 ibm-plex-mono-bold text-sm md:text-base font-semibold py-3 px-4 md:px-6 rounded-lg uppercase 
+                                         opacity-70 hover:opacity-100 hover:bg-zinc-700 hover:border-zinc-600 
+                                         transform hover:scale-105 transition-all duration-300 cursor-pointer
+                                         flex items-center justify-center"
+                            >
+                                {company}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
-
         </div>
     )
 }

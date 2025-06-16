@@ -9,7 +9,7 @@ function Contact() {
         const form = e.target;
         const data = new FormData(form);
 
-    
+        try {
             const response = await fetch("https://formspree.io/f/xanjjwje",{
                 method: 'POST',
                 headers: {'Accept' : 'application/json'},
@@ -23,99 +23,93 @@ function Contact() {
             }else{
                 setStatus('ERROR');
                 triggerPopup();
-
             }
-        };
-        // catch(error){
-        //         setStatus('ERROR');
+        } catch(error) {
+            setStatus('ERROR');
+            triggerPopup();
+        }
+    };
 
-        //     }
+    const triggerPopup=()=>{
+        setShowPopup(true);
+        setTimeout(() => {
+            setShowPopup(false);    
+        }, 2000);
+    };
 
-        const triggerPopup=()=>{
-            setShowPopup(true);
-            setTimeout(() => {
-                setShowPopup(false);    
-            }, 2000);
-        };
-        
-
-
-
-  return (
-    <div id="contact" className="ibm-plex-mono-regular">
-
-      <div className="bg-zinc-900 text-white flex flex-col justify-center items-center min-h-screen box-border">
-
-            {/* Popup Notification */}
+    return (
+        <div id="contact" className="ibm-plex-mono-regular">
+            <div className="bg-zinc-900 text-white flex flex-col justify-center items-center min-h-screen box-border px-4 py-8 md:py-0">
+                {/* Popup Notification */}
                 {showPopup && (
-                    <div className={`fixed top-5 right-5 px-4 py-2 rounded-md text-white ${status === 'SUCCESS' ? 'bg-green-600' : 'bg-red-600'} transition`}>
+                    <div className={`fixed top-5 right-5 px-4 py-2 rounded-md text-white shadow-lg transform transition-all duration-300 ${
+                        status === 'SUCCESS' ? 'bg-green-600' : 'bg-red-600'
+                    }`}>
                         {status === 'SUCCESS' ? 'Form submitted successfully!' : 'Oops! Something went wrong.'}
                     </div>
                 )}
 
-        <div className="w-full max-w-lg text-center">
-          <h1 className="text-3xl font-bold ibm-plex-mono-bold mb-3">Get In Touch</h1>
-          <p className="text-gray-400 text-sm mb-6">
-            I’m excited to hear from you! Whether it’s a project, collaboration, or just a hello — drop me a message and let’s connect.
-          </p>
+                <div className="w-full max-w-lg text-center">
+                    <h1 className="text-2xl md:text-3xl font-bold ibm-plex-mono-bold mb-3">Get In Touch</h1>
+                    <p className="text-gray-400 text-sm md:text-base mb-8 px-2">
+                        I'm excited to hear from you! Whether it's a project, collaboration, or just a hello — drop me a message and let's connect.
+                    </p>
 
-          <form onSubmit={handleSubmit}
-            className="space-y-4"
-          >
-            {/* Honeypot input for spam protection */}
-            <input type="text" name="_gotcha" style={{ display: 'none' }} />
+                    <form onSubmit={handleSubmit} className="space-y-5 bg-zinc-800 p-6 rounded-xl shadow-lg">
+                        {/* Honeypot input for spam protection */}
+                        <input type="text" name="_gotcha" style={{ display: 'none' }} />
 
-            <div className="text-left">
-              <label className="block text-sm font-medium">Email</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Please enter your email"
-                required
-                className="w-full p-3 border border-gray-700 rounded-md bg-white text-black"
-              />
+                        <div className="text-left space-y-2">
+                            <label className="block text-sm font-medium text-gray-300">Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Please enter your email"
+                                required
+                                className="w-full p-3 border border-zinc-600 rounded-lg bg-zinc-700 text-white placeholder-gray-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-colors"
+                            />
+                        </div>
+
+                        <div className="text-left space-y-2">
+                            <label className="block text-sm font-medium text-gray-300">Mobile</label>
+                            <input
+                                type="tel"
+                                name="mobile"
+                                placeholder="Enter mobile number"
+                                className="w-full p-3 border border-zinc-600 rounded-lg bg-zinc-700 text-white placeholder-gray-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-colors"
+                                pattern="\d{10}"
+                                title="Please enter 10 digits phone number"
+                            />
+                        </div>
+
+                        <div className="text-left space-y-2">
+                            <label className="block text-sm font-medium text-gray-300">Message</label>
+                            <textarea
+                                name="message"
+                                placeholder="Enter your message"
+                                rows="4"
+                                required
+                                className="w-full p-3 border border-zinc-600 rounded-lg bg-zinc-700 text-white placeholder-gray-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500 transition-colors resize-none"
+                            ></textarea>
+                        </div>
+
+                        <button
+                            type="submit"
+                            className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105 cursor-pointer relative group"
+                        >
+                            <span className="relative z-10 flex items-center justify-center gap-2">
+                                Submit
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </span>
+                            <span className="absolute inset-0 bg-green-700 opacity-20 blur-lg rounded-lg group-hover:opacity-30 transition-opacity"></span>
+                        </button>
+                    </form>
+                </div>
             </div>
-
-            <div className="text-left">
-              <label className="block text-sm font-medium">Mobile</label>
-              <input
-                type="tel"
-                name="mobile"
-                placeholder="Enter mobile"
-                className="w-full p-3 border border-gray-700 rounded-md bg-white text-black"
-                pattern="\d{10}"
-                title="Please enter 10 digits phone number"
-              />
-            </div>
-
-            <div className="text-left">
-              <label className="block text-sm font-medium">Message</label>
-              <textarea
-                name="message"
-                placeholder="Enter your message"
-                rows="4"
-                required
-                className="w-full p-3 border border-gray-700 rounded-md bg-white text-black resize-none"
-              ></textarea>
-            </div>
-
-            <button
-  type="submit"
-  className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-md transition-transform duration-300 ease-in-out transform hover:scale-105 cursor-pointer relative"
->
-  Submit →
-  <span className="absolute inset-0 bg-green-700 opacity-20 blur-lg rounded-md"></span>
-</button>
-
-                        {/* {status === 'SUCCESS' && <p className="text-green-500 mt-4">Thank you! Your message has been sent.</p>}
-                        {status === 'ERROR' && <p className="text-red-500 mt-4">Oops! Something went wrong. Please try again.</p>} */}
-          </form>
         </div>
-
-      </div>
-
-    </div>
-  );
+    );
 }
 
 export default Contact;
