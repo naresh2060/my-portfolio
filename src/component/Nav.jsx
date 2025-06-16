@@ -14,8 +14,8 @@ export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full bg-zinc-900 py-2 fixed top-0 left-0 z-50">
-      <nav className="bg-zinc-800 flex justify-between items-center mx-[10%] py-5 rounded-2xl relative">
+    <div className="w-full bg-zinc-900 py-2 md:fixed md:top-0 md:left-0 z-50">
+      <nav className="bg-zinc-800 flex justify-between items-center mx-[5%] md:mx-[10%] py-5 rounded-2xl relative">
         {/* Mobile Menu Toggle - Always visible on mobile */}
         <div className="md:hidden ml-4">
           <button 
