@@ -4,8 +4,8 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+pn.log*
+lerna-debug.lpm-debugog*
 
 node_modules
 dist

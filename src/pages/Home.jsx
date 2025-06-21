@@ -11,7 +11,7 @@ export default function Home() {
                 <Nav />
                 
                 {/* Main Content Container */}
-                <div className="flex flex-col md:flex-row mx-[5%] md:mx-[15%] mt-6 md:mt-20">
+                <div className="flex flex-col md:flex-row mx-[5%] md:mx-[15%] mt-6 md:mt-20 md:pt-20">
                     {/* Profile Image - Top on mobile, Right on desktop */}
                     <div className="w-full md:w-1/3 order-1 md:order-2 flex justify-center md:justify-end mb-6 md:mb-0">
                         <div className="relative w-56 h-56 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-zinc-700 shadow-xl transform hover:scale-105 transition-transform duration-300">
@@ -46,7 +46,7 @@ export default function Home() {
                         {['ClickUp', 'Dropbox', 'Paychex', 'Elastic'].map((company) => (
                             <div 
                                 key={company}
-                                className="bg-zinc-800 border border-zinc-700 ibm-plex-mono-bold text-xs md:text-base font-semibold py-2 md:py-3 px-3 md:px-6 rounded-lg uppercase 
+                                className="bg-zinc-500 border border-zinc-700 ibm-plex-mono-bold text-xs md:text-base font-semibold py-2 md:py-3 px-3 md:px-6 rounded-lg uppercase 
                                          opacity-70 hover:opacity-100 hover:bg-zinc-700 hover:border-zinc-600 
                                          transform hover:scale-105 transition-all duration-300 cursor-pointer
                                          flex items-center justify-center"
