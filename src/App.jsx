@@ -5,7 +5,8 @@ import Testimonials from './pages/Testimonials.jsx'
 import Work from './pages/Work.jsx'
 import Contact from './pages/Contact.jsx'
 import ScrollToTopButton from './component/ScrollToTopButton.jsx'
-import Footer from './pages/footer.jsx'
+import MadeWithLove from './pages/MadeWithLove.jsx'
+import Footer from './pages/Footer.jsx'
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <Contact/>
       <ScrollToTopButton />
       <Footer/>
+      <MadeWithLove/>
     </div>
   )
 }
