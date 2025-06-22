@@ -32,7 +32,7 @@ export default function Nav() {
       <nav className="bg-zinc-800 hidden md:flex justify-between items-center mx-[10%] py-5 rounded-2xl relative">
         {/* Logo */}
         <div className="logo mx-8">
-          <FontAwesomeIcon icon={faComment} className='text-white text-2xl' />
+          {/* <FontAwesomeIcon icon={faComment} className='text-white text-2xl' /> */}
         </div>
 
         {/* Desktop Menu */}
@@ -46,7 +46,7 @@ export default function Nav() {
 
         {/* Notification Icons */}
         <div className="logo mr-8 flex items-center gap-4">
-          <FontAwesomeIcon icon={faBell} className='text-white text-xl' />
+          <FontAwesomeIcon icon={faBell} className='text-white text-xl cursor-pointer' />
           <FontAwesomeIcon icon={faComment} className='text-white text-2xl cursor-pointer' onClick={() => scrollToSection('contact')} />
         </div>
       </nav>
