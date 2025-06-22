@@ -40,7 +40,7 @@ const RecentWork = () => {
   const swiperRef = useRef(null);
 
   return (
-    <div id="recent-work" className="w-full min-h-screen bg-white flex flex-col items-center justify-center px-4 md:px-0 box-border">
+    <div id="recent-work" className="w-full min-h-screen bg-white flex flex-col items-center justify-center px-4 md:px-0 box-border ">
       {/* Title Section */}
       <div className="text-center mb-6 md:mb-12 mt-6 md:mt-16 w-full">
         <h2 className="text-black text-2xl md:text-5xl font-bold mb-3 md:mb-6">Recent Work</h2>

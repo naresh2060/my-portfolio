@@ -4,6 +4,8 @@ import Nav from '../component/Nav'
 import Button from '../component/Button'
 import '../font.css'
 
+
+
 export default function Home() {
     return (
         <div id="home">
@@ -42,19 +44,27 @@ export default function Home() {
                     <h2 className="text-sm mb-4 md:mb-6 ibm-plex-mono-regular text-white text-center md:text-left">
                         Worked with >>
                     </h2>
-                    <div className="grid grid-cols-2 md:flex md:flex-row gap-3 md:gap-6 justify-center md:justify-start">
-                        {['ClickUp', 'Dropbox', 'Paychex', 'Elastic'].map((company) => (
-                            <div 
-                                key={company}
-                                className="bg-zinc-500 border border-zinc-700 ibm-plex-mono-bold text-xs md:text-base font-semibold py-2 md:py-3 px-3 md:px-6 rounded-lg uppercase 
-                                         opacity-70 hover:opacity-100 hover:bg-zinc-700 hover:border-zinc-600 
-                                         transform hover:scale-105 transition-all duration-300 cursor-pointer
-                                         flex items-center justify-center"
-                            >
-                                {company}
-                            </div>
-                        ))}
-                    </div>
+                   <div className="grid grid-cols-2 md:flex md:flex-row gap-3 md:gap-6 justify-center md:justify-start">
+    {[
+        { name: 'Developers Guru Pvt. Ltd.', link: 'https://www.developersguru.com.np/' },
+        { name: 'Dropbox', link: 'https://www.dropbox.com' },
+        { name: 'Elastic', link: 'https://www.elastic.co' }
+    ].map((company) => (
+        <a
+            key={company.name}
+            href={company.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-zinc-500 border border-zinc-700 ibm-plex-mono-bold text-xs md:text-base font-semibold py-2 md:py-3 px-3 md:px-6 rounded-lg uppercase 
+                       opacity-70 hover:opacity-100 hover:bg-zinc-700 hover:border-zinc-600 
+                       transform hover:scale-105 transition-all duration-300 cursor-pointer
+                       flex items-center justify-center"
+        >
+            {company.name}
+        </a>
+    ))}
+</div>
+
                 </div>
             </div>
         </div>
