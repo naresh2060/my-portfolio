@@ -17,7 +17,7 @@ export default function Home() {
                     {/* Profile Image - Top on mobile, Right on desktop */}
                     <div className="w-full md:w-1/3 order-1 md:order-2 flex justify-center md:justify-end mb-6 md:mb-0">
                         <div className="relative w-45 h-45 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-zinc-700 shadow-xl transform hover:scale-105 transition-transform duration-300">
-                            <img 
+                            <img  
                                 src={`${import.meta.env.BASE_URL}image/profile.jpg`} 
                                 alt="Naresh Kushawaha" 
                                 className="w-full h-full object-cover"

@@ -13,18 +13,19 @@ const projects = [
     image: `${import.meta.env.BASE_URL}image/portfolio.png`,
     link: window.location.origin,
   },
+ 
   {
+    title: "News App",
+    description:
+      "A modern news app that delivers the latest headlines from multiple categories using real-time APIs.",
+    image: `${import.meta.env.BASE_URL}image/newsapp.png`,
+    link: window.location.origin,
+  },
+   {
     title: "E-Commerce Website",
     description:
       "Designed and developed a seamless shopping experience for customers with a responsive UI.",
     image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80",
-    link: window.location.origin,
-  },
-  {
-    title: "Tech Blog Platform",
-    description:
-      "Built a modern blogging platform for tech enthusiasts to share insights and news.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
     link: window.location.origin,
   },
   {

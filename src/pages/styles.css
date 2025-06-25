@@ -33,6 +33,7 @@
     background-size: 200% 200%;
 }
 
+
 @keyframes borderAnimation {
     0% {
         background-position: 0% 50%;
